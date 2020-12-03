@@ -6,11 +6,14 @@
 
 <script>
 export default {
-  async setup (props) {
-    console.log('id is ' + props.id)
-    return {
-      id: props.id
+  props: {
+    id: {
+      type: String,
+      required: true
     }
+  },
+  async setup (props) {
+    console.log('props is ', props)
   }
 }
 </script>
